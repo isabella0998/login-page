@@ -3,75 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Comunidad Rafaelista</title>
+    <title>Información del Estudiante</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            padding: 20px;
         }
-        .login-container {
+        .student-info {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .login-container h1 {
+        .student-info h1 {
             text-align: center;
+        }
+        .info-section {
             margin-bottom: 20px;
         }
-        .login-container input {
-            display: block;
+        .info-section h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .info-table {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border-collapse: collapse;
         }
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
+        .info-table th, .info-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
         }
-        .login-container button:hover {
-            background-color: #0056b3;
-        }
-        .error-message {
-            color: red;
-            text-align: center;
+        .info-table th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Iniciar Sesión</h1>
-        <input type="text" id="email" placeholder="Correo Electrónico">
-        <input type="password" id="password" placeholder="Contraseña">
-        <button onclick="login()">Iniciar Sesión</button>
-        <p id="error-message" class="error-message"></p>
+    <div class="student-info">
+        <h1>Información del Estudiante</h1>
+        <div class="info-section">
+            <h2>Datos Personales</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Nombre</th>
+                    <td>Isabella Diaz</td>
+                </tr>
+                <tr>
+                    <th>Correo</th>
+                    <td>isabelladiazr@rafaeljmejia.edu.co</td>
+                </tr>
+                <tr>
+                    <th>Grado</th>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th>Tipo de documento</th>
+                    <td>TI</td>
+                </tr>
+                <tr>
+                    <th>Número de documento</th>
+                    <td>1014216574</td>
+                </tr>
+                <tr>
+                    <th>Grupo</th>
+                    <td>10-02</td>
+                </tr>
+                <tr>
+                    <th>Fecha de nacimiento</th>
+                    <td>14/05/2007</td>
+                </tr>
+                <tr>
+                    <th>Dirección</th>
+                    <td>Carrera 25 #27-57 Int 7</td>
+                </tr>
+                <tr>
+                    <th>Barrio</th>
+                    <td>Santana</td>
+                </tr>
+                <tr>
+                    <th>Municipio</th>
+                    <td>Quindio</td>
+                </tr>
+                <tr>
+                    <th>Teléfono</th>
+                    <td>3214569873</td>
+                </tr>
+            </table>
+        </div>
+        <div class="info-section">
+            <h2>Familia</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Nombre del Padre</th>
+                    <td>Juan Diaz</td>
+                </tr>
+                <tr>
+                    <th>Teléfono del Padre</th>
+                    <td>3217896541</td>
+                </tr>
+                <tr>
+                    <th>Nombre de la Madre</th>
+                    <td>Maria Lopez</td>
+                </tr>
+                <tr>
+                    <th>Teléfono de la Madre</th>
+                    <td>3204567890</td>
+                </tr>
+            </table>
+        </div>
+        <div class="info-section">
+            <h2>Información Académica</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Asignatura</th>
+                    <th>Hora</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Lengua Castellana</td>
+                    <td>11:00am</td>
+                    <td>Llamado de atención</td>
+                </tr>
+                <tr>
+                    <td>Tecnología</td>
+                    <td>8:00am</td>
+                    <td>Situación</td>
+                </tr>
+                <tr>
+                    <td>Matemáticas</td>
+                    <td>10:00am</td>
+                    <td>Ficha puesta este año: Tipo 1 - Problema de hablar en clase</td>
+                </tr>
+                <!-- Añadir más información académica aquí -->
+            </table>
+        </div>
     </div>
-
-    <script>
-        function login() {
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-            var errorMessage = document.getElementById("error-message");
-
-            // Credenciales estáticas para el ejemplo
-            if (email === "isabelladiazr@rafaeljmejia.edu.co" && password === "1014216574d") {
-                window.location.href = "informacion-estudiante.html";
-            } else {
-                errorMessage.textContent = "Usuario o contraseña incorrectos";
-            }
-        }
-    </script>
 </body>
 </html>
